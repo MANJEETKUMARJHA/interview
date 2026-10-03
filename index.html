@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="KSA Engineering delivers dependable MEP, HVAC, electrical, and infrastructure projects across Saudi Arabia."
+    />
+    <meta name="theme-color" content="#071716" />
+    <title>KSA Engineering — Built on Experience</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"><span></span></div>
+
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="KSA Engineering home">
+        <span class="brand-mark">KSA<span class="brand-period">.</span></span>
+        <span class="brand-caption">ENGINEERING<br />& CONTRACTING</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="site-navigation"
+        aria-label="Open navigation"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-navigation" aria-label="Main navigation">
+        <a href="#expertise">Expertise</a>
+        <a href="#projects">Selected work</a>
+        <a href="#about">About us</a>
+        <a class="nav-contact" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1800&q=80"
+          srcset="
+            https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=900&q=75 900w,
+            https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1800&q=80 1800w
+          "
+          sizes="100vw"
+          alt=""
+          aria-hidden="true"
+          fetchpriority="high"
+          decoding="async"
+        />
+        <div class="hero-loader" aria-hidden="true">
+          <span class="loader-ring"></span>
+          <span class="loader-copy">LOADING THE SCENE</span>
+        </div>
+        <div class="hero-grain" aria-hidden="true"></div>
+        <div class="hero-blueprint" aria-hidden="true">
+          <svg viewBox="0 0 620 620" role="presentation">
+            <defs>
+              <linearGradient id="blueprint-line" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#dff0e9" stop-opacity=".2" />
+                <stop offset=".52" stop-color="#dff0e9" stop-opacity=".75" />
+                <stop offset="1" stop-color="#dff0e9" stop-opacity=".15" />
+              </linearGradient>
+              <linearGradient id="blueprint-accent" x1="0" y1="1" x2="1" y2="0">
+                <stop offset="0" stop-color="#cf8052" stop-opacity=".12" />
+                <stop offset=".8" stop-color="#e08c5a" />
+              </linearGradient>
+              <pattern id="blueprint-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+                <path d="M30 0H0V30" fill="none" stroke="#dff0e9" stroke-opacity=".1" stroke-width=".7" />
+              </pattern>
+            </defs>
+            <circle class="blueprint-orbit blueprint-orbit-outer" cx="310" cy="306" r="254" />
+            <circle class="blueprint-orbit blueprint-orbit-inner" cx="310" cy="306" r="200" />
+            <circle class="blueprint-grid-disc" cx="310" cy="306" r="167" fill="url(#blueprint-grid)" />
+            <path class="blueprint-line blueprint-draw-one" d="M116 372 306 261l196 113-191 112z" />
+            <path class="blueprint-line blueprint-draw-two" d="M116 372v-87l190-111 196 112v88" />
+            <path class="blueprint-line blueprint-draw-three" d="M306 261v225M116 285l195 111 191-110" />
+            <path class="blueprint-line blueprint-line-faint" d="m164 257 190 109m-153-133 190 109m-150-133 190 109M164 315v-89m48 117v-89m48 117v-89m50 117v-89m48 117v-89m48 61v-89" />
+            <path class="blueprint-line blueprint-line-faint" d="m118 306 187-109 191 110M118 334l187-109 191 110M118 359l187-109 191 110" />
+            <path class="blueprint-accent-line" d="M145 450h88l42-24h100l34-20" />
+            <path class="blueprint-accent-line blueprint-dash" d="M180 237v-63h97l35-21h115" />
+            <path class="blueprint-accent-line blueprint-dash" d="M360 489v-56l76-44v-91" />
+            <circle class="blueprint-node blueprint-node-one" cx="180" cy="237" r="5" />
+            <circle class="blueprint-node blueprint-node-two" cx="427" cy="153" r="5" />
+            <circle class="blueprint-node blueprint-node-three" cx="435" cy="299" r="5" />
+            <circle class="blueprint-node blueprint-node-four" cx="145" cy="450" r="5" />
+            <circle class="blueprint-center" cx="310" cy="306" r="3" />
+            <path class="blueprint-tick" d="M310 37v13m0 512v13M41 306h13m512 0h13" />
+          </svg>
+          <span class="blueprint-label blueprint-label-one">MECHANICAL</span>
+          <span class="blueprint-label blueprint-label-two">CLIMATE</span>
+          <span class="blueprint-label blueprint-label-three">POWER</span>
+          <span class="blueprint-label blueprint-label-four">DELIVERY</span>
+          <span class="blueprint-crosshair" aria-hidden="true">+</span>
+        </div>
+        <div class="hero-content">
+          <p class="eyebrow"><span>KSA</span> / BUILT ON EXPERIENCE. ENGINEERED FOR TOMORROW.</p>
+          <h1 id="hero-title">
+            Built to perform.<br />
+            <span>Engineered to last.</span>
+          </h1>
+          <p class="hero-description">
+            We deliver the essential systems behind Saudi Arabia’s most ambitious places —
+            with care, precision, and 18 years of know-how.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-copper" href="#contact">Start a conversation <span aria-hidden="true">↗</span></a>
+            <a class="text-link" href="#projects"><span class="play-icon" aria-hidden="true">↓</span> Explore our work</a>
+          </div>
+        </div>
+        <div class="hero-side-note" aria-hidden="true">Dammam · Riyadh · Across the Kingdom</div>
+        <a class="hero-scroll" href="#expertise" aria-label="Scroll to our expertise">
+          <span>SCROLL TO EXPLORE</span><i aria-hidden="true"></i>
+        </a>
+        <div class="hero-index" aria-hidden="true">01 <span>/ 04</span></div>
+      </section>
+
+      <section class="proof-bar" aria-label="Company at a glance" data-reveal>
+        <div class="proof-item"><span>ESTABLISHED</span><strong>2008</strong></div>
+        <div class="proof-item"><span>HEADQUARTERS</span><strong>Dammam, KSA</strong></div>
+        <div class="proof-item"><span>PROJECTS</span><strong>1,500<span>+</span></strong></div>
+        <div class="proof-item"><span>EXPERIENCE</span><strong>18<span>+ years</span></strong></div>
+        <div class="proof-item"><span>QUALITY</span><strong>ISO certified</strong></div>
+        <div class="proof-item proof-note"><span>ON THE GROUND</span><strong>Across Saudi Arabia</strong></div>
+      </section>
+
+      <section class="intro section-wrap" id="about" data-reveal>
+        <div class="section-kicker"><span>01</span><span>WHO WE ARE</span></div>
+        <div class="intro-copy">
+          <p class="eyebrow eyebrow-dark">THE SYSTEMS THAT KEEP THINGS MOVING</p>
+          <h2>Big projects need<br />a <span>steady hand.</span></h2>
+          <div class="intro-bottom">
+            <p>
+              From first drawings to final commissioning, we make complex building
+              systems work together. Our teams bring practical thinking, accountable
+              delivery, and a long view to every project.
+            </p>
+            <a class="underlined-link" href="#contact">Get to know us <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="intro-stamp" aria-label="18 years of building with purpose">
+          <span>18</span>
+          <span>YEARS<br />BUILDING WITH PURPOSE</span>
+        </div>
+      </section>
+
+      <section class="expertise section-wrap" id="expertise">
+        <div class="section-heading" data-reveal>
+          <div class="section-kicker"><span>02</span><span>WHAT WE DO</span></div>
+          <div>
+            <p class="eyebrow eyebrow-dark">CONNECTED EXPERTISE. ONE ACCOUNTABLE TEAM.</p>
+            <h2>Built around<br />what <span>works.</span></h2>
+          </div>
+          <p class="section-heading-note">We bring the right people and disciplines together to deliver reliable systems, safely and on schedule.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card" data-reveal>
+            <span class="service-number">01 / MEP</span>
+            <div class="service-symbol" aria-hidden="true">⌁</div>
+            <h3>Mechanical &<br />plumbing</h3>
+            <p>Integrated building services designed for performance, comfort, and long-term maintainability.</p>
+            <a href="#contact" aria-label="Discuss mechanical and plumbing services">↗</a>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-number">02 / HVAC</span>
+            <div class="service-symbol" aria-hidden="true">◉</div>
+            <h3>Climate<br />systems</h3>
+            <p>Efficient heating, ventilation, and air conditioning for demanding environments.</p>
+            <a href="#contact" aria-label="Discuss climate systems">↗</a>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-number">03 / POWER</span>
+            <div class="service-symbol" aria-hidden="true">ϟ</div>
+            <h3>Electrical &<br />low current</h3>
+            <p>Dependable power, lighting, controls, and connected systems from design to handover.</p>
+            <a href="#contact" aria-label="Discuss electrical and low-current services">↗</a>
+          </article>
+          <article class="service-card" data-reveal>
+            <span class="service-number">04 / DELIVERY</span>
+            <div class="service-symbol" aria-hidden="true">⌗</div>
+            <h3>Project<br />delivery</h3>
+            <p>Clear coordination, disciplined execution, testing, and commissioning at every stage.</p>
+            <a href="#contact" aria-label="Discuss project delivery">↗</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="projects" id="projects">
+        <div class="projects-top section-wrap" data-reveal>
+          <div class="section-kicker"><span>03</span><span>SELECTED WORK</span></div>
+          <div class="projects-heading">
+            <p class="eyebrow">MADE TO MATTER</p>
+            <h2>Proof is in<br />the <span>projects.</span></h2>
+          </div>
+          <p class="projects-intro">A selection of the places and infrastructure our teams have helped bring to life.</p>
+          <a class="underlined-link underlined-link-light" href="#contact">Discuss your project <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="project-grid">
+          <article class="project-card project-large" data-reveal>
+            <div class="project-photo project-photo-one" role="img" aria-label="Modern industrial facility at dusk"></div>
+            <div class="project-meta"><span>INDUSTRIAL · EASTERN PROVINCE</span><span>01 / 03</span></div>
+            <h3>Powering progress<br />at scale.</h3>
+            <p>Industrial infrastructure & utilities</p>
+          </article>
+          <article class="project-card project-small" data-reveal>
+            <div class="project-photo project-photo-two" role="img" aria-label="Contemporary commercial building interior"></div>
+            <div class="project-meta"><span>COMMERCIAL · RIYADH</span><span>02 / 03</span></div>
+            <h3>Comfort in<br />every detail.</h3>
+            <p>Integrated MEP & climate systems</p>
+          </article>
+          <article class="project-card project-small project-third" data-reveal>
+            <div class="project-photo project-photo-three" role="img" aria-label="Engineering team working on site"></div>
+            <div class="project-meta"><span>ENGINEERING · KSA</span><span>03 / 03</span></div>
+            <h3>From plan<br />to performance.</h3>
+            <p>Testing, commissioning & handover</p>
+          </article>
+        </div>
+        <p class="project-disclaimer">Project imagery is illustrative. Contact us for detailed project references.</p>
+      </section>
+
+      <section class="approach section-wrap">
+        <div class="section-kicker"><span>04</span><span>HOW WE WORK</span></div>
+        <div class="approach-body" data-reveal>
+          <div class="approach-heading">
+            <p class="eyebrow eyebrow-dark">GOOD WORK IS NEVER AN ACCIDENT</p>
+            <h2>Clear at every<br /><span>step.</span></h2>
+          </div>
+          <div class="steps">
+            <article class="step">
+              <span>01</span><div><h3>Understand the brief</h3><p>We listen first, align on what success means, and bring the right expertise to the table.</p></div>
+            </article>
+            <article class="step">
+              <span>02</span><div><h3>Plan it together</h3><p>We coordinate people, systems, and milestones before the work gets underway.</p></div>
+            </article>
+            <article class="step">
+              <span>03</span><div><h3>Deliver with care</h3><p>We stay close to the details, keep communication open, and own the outcome.</p></div>
+            </article>
+            <article class="step">
+              <span>04</span><div><h3>Prove performance</h3><p>We test, commission, and hand over systems ready for the work ahead.</p></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <div class="contact-image" aria-hidden="true"></div>
+        <div class="contact-inner section-wrap">
+          <div class="section-kicker section-kicker-light"><span>05</span><span>YOUR NEXT PROJECT</span></div>
+          <div class="contact-layout" data-reveal>
+            <div class="contact-copy">
+              <p class="eyebrow">LET’S MAKE IT WORK</p>
+              <h2>Have a project<br />in <span>mind?</span></h2>
+              <p>Tell us a little about what you’re planning. Our team will get back to you to discuss the next steps.</p>
+              <a class="contact-phone" href="tel:+966570483020">+966 57 048 3020 <span aria-hidden="true">↗</span></a>
+            </div>
+            <form class="contact-form" id="proposal-form">
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="e.g. Alex Morgan" required />
+              <label for="company">Company</label>
+              <input id="company" name="company" type="text" autocomplete="organization" placeholder="Your organization" />
+              <label for="project">What are you working on?</label>
+              <textarea id="project" name="project" rows="3" placeholder="A few details about your project..." required></textarea>
+              <button class="button button-copper form-submit" type="submit">Send via WhatsApp <span aria-hidden="true">↗</span></button>
+              <p class="form-note">Your message opens in WhatsApp so you can review it before sending.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#home" aria-label="KSA Engineering, back to top">
+        <span class="brand-mark">KSA<span class="brand-period">.</span></span>
+        <span class="brand-caption">ENGINEERING<br />& CONTRACTING</span>
+      </a>
+      <p>Built on experience. Engineered for tomorrow.</p>
+      <a class="back-to-top" href="#home">BACK TO TOP <span aria-hidden="true">↑</span></a>
+      <span class="copyright">© <span id="year">2026</span> KSA Engineering</span>
+    </footer>
+  </body>
+</html>
