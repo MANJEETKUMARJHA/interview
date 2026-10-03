@@ -38,6 +38,21 @@ a {
 }
 
 button,
+a,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--copper-bright);
+  outline-offset: 4px;
+}
+
+button,
 input,
 textarea {
   font: inherit;
@@ -162,6 +177,9 @@ textarea {
 }
 
 .nav-contact {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
   padding: 13px 17px;
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
@@ -529,12 +547,12 @@ textarea {
 }
 
 .button-copper {
-  background: var(--copper);
+  background: #ad542f;
   color: #fff;
 }
 
 .button-copper:hover {
-  background: var(--copper-bright);
+  background: #984628;
 }
 
 .button span {
@@ -543,6 +561,7 @@ textarea {
 
 .text-link {
   display: inline-flex;
+  min-height: 44px;
   align-items: center;
   gap: 11px;
   color: rgba(247, 248, 244, 0.84);
@@ -576,6 +595,7 @@ textarea {
   bottom: 37px;
   left: 7.2%;
   display: flex;
+  min-height: 44px;
   align-items: center;
   gap: 13px;
   color: rgba(247, 248, 244, 0.58);
@@ -715,6 +735,9 @@ textarea {
 }
 
 .underlined-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
   flex: 0 0 auto;
   padding-bottom: 8px;
   border-bottom: 1px solid var(--copper);
@@ -884,6 +907,10 @@ textarea {
   position: absolute;
   right: 18px;
   bottom: 25px;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
   color: var(--copper);
   font-size: 17px;
   transition: transform 180ms ease;
@@ -1154,6 +1181,8 @@ textarea {
 
 .contact-phone {
   display: inline-block;
+  min-height: 44px;
+  align-content: center;
   padding-bottom: 7px;
   border-bottom: 1px solid rgba(224, 140, 90, 0.7);
   font-size: 13px;
@@ -1236,6 +1265,9 @@ textarea {
 }
 
 .back-to-top {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
   justify-self: end;
   color: #c1cbc7;
   font-family: var(--mono);
@@ -1363,6 +1395,33 @@ textarea {
   }
 }
 
+@media (max-width: 900px) {
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .service-card {
+    min-height: 235px;
+    padding: 22px 18px 24px 0;
+  }
+
+  .service-card:not(:first-child) {
+    padding-left: 18px;
+  }
+
+  .service-card:nth-child(2) {
+    border-right: 0;
+  }
+
+  .service-card:nth-child(-n + 2) {
+    border-bottom: 1px solid #cdd0c8;
+  }
+
+  .service-card:nth-child(3) {
+    padding-left: 0;
+  }
+}
+
 @media (max-width: 700px) {
   html {
     scroll-padding-top: 72px;
@@ -1432,6 +1491,9 @@ textarea {
   .nav-contact {
     align-self: flex-start;
     margin-top: 14px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
   }
 
   .hero {
@@ -1494,6 +1556,15 @@ textarea {
     flex-direction: column;
     gap: 20px;
     margin-top: 25px;
+  }
+
+  .hero-actions .button,
+  .hero-actions .text-link {
+    min-height: 48px;
+  }
+
+  .hero-actions .text-link {
+    padding: 0 4px;
   }
 
   .hero-side-note {
@@ -1581,8 +1652,10 @@ textarea {
   }
 
   .intro-stamp {
-    right: 7%;
-    bottom: 45px;
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin: 27px 0 0 auto;
     width: 83px;
     height: 83px;
     opacity: 0.85;
@@ -1645,7 +1718,15 @@ textarea {
   }
 
   .service-card > a {
-    right: 12px;
+    right: 5px;
+    bottom: 12px;
+    display: grid;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    border: 1px solid rgba(207, 128, 82, .35);
+    border-radius: 50%;
+    font-size: 19px;
   }
 
   .projects {
@@ -1738,6 +1819,26 @@ textarea {
     margin-top: 37px;
   }
 
+  .contact-form input,
+  .contact-form textarea {
+    min-height: 48px;
+    font-size: 16px;
+  }
+
+  .contact-form textarea {
+    min-height: 90px;
+  }
+
+  .form-submit {
+    min-height: 50px;
+  }
+
+  .contact-phone {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+  }
+
   .site-footer {
     grid-template-columns: 1fr auto;
     padding: 24px 6%;
@@ -1755,6 +1856,30 @@ textarea {
 
   .copyright {
     grid-row: 3;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero h1 {
+    font-size: 49px;
+  }
+
+  .hero .eyebrow {
+    font-size: 7px;
+    letter-spacing: .85px;
+  }
+
+  .proof-item {
+    padding-right: 7px;
+  }
+
+  .service-card h3 {
+    font-size: 16px;
+  }
+
+  .project-meta {
+    font-size: 6px;
+    letter-spacing: .35px;
   }
 }
 
