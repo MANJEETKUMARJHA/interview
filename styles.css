@@ -856,7 +856,7 @@ textarea {
 
 .service-card:hover .service-symbol,
 .service-card:focus-within .service-symbol {
-  transform: translateY(-3px) rotate(-7deg);
+  transform: translateY(-3px);
 }
 
 .service-symbol {
@@ -879,12 +879,214 @@ textarea {
 }
 
 .service-symbol {
+  display: flex;
+  width: 64px;
   height: 48px;
   margin-top: 18px;
   color: var(--copper);
-  font-size: 37px;
-  font-weight: 400;
-  line-height: 1;
+}
+
+.service-graphic {
+  display: block;
+  width: 64px;
+  height: 48px;
+  overflow: visible;
+}
+
+.graphic-track,
+.graphic-corner {
+  stroke: #82918a;
+  stroke-width: 1.15;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.graphic-valve {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: valve-adjust 4.8s ease-in-out infinite;
+}
+
+.graphic-water {
+  fill: var(--copper-bright);
+  filter: drop-shadow(0 0 2px rgba(224, 140, 90, .45));
+  animation: water-flow 2.1s ease-in-out infinite;
+}
+
+.graphic-draw,
+.graphic-air,
+.graphic-detail,
+.graphic-corner {
+  stroke: var(--copper);
+  stroke-width: 1.45;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.graphic-draw {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  transition: stroke-dashoffset 850ms cubic-bezier(.2, .7, .2, 1);
+}
+
+.graphic-check {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  transition: stroke-dashoffset 500ms ease 250ms;
+}
+
+.graphic-detail {
+  fill: rgba(207, 128, 82, .08);
+  opacity: .78;
+  transition: opacity 220ms ease, fill 220ms ease;
+}
+
+.graphic-fan {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: service-fan-turn 12s linear infinite;
+}
+
+.graphic-air {
+  stroke-dasharray: 22 8;
+  stroke-dashoffset: 30;
+  opacity: .75;
+  animation: airflow 2.4s linear infinite;
+  transition: stroke-dashoffset 650ms ease, opacity 220ms ease;
+}
+
+.graphic-bolt {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: current-surge 3.2s ease-in-out infinite;
+}
+
+.graphic-current {
+  fill: none;
+  stroke: var(--copper-bright);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 9 91;
+  stroke-dashoffset: 100;
+  filter: drop-shadow(0 0 2px rgba(224, 140, 90, .5));
+  animation: current-travel 2.3s linear infinite;
+}
+
+.graphic-pulse {
+  fill: var(--copper-bright);
+  filter: drop-shadow(0 0 3px rgba(224, 140, 90, .8));
+  animation: node-pulse 1.8s ease-in-out infinite;
+}
+
+.graphic-scan {
+  fill: none;
+  stroke: var(--copper-bright);
+  stroke-width: 1;
+  stroke-dasharray: 2 2;
+  opacity: 0;
+  filter: drop-shadow(0 0 2px rgba(224, 140, 90, .55));
+  animation: blueprint-scan 4.8s ease-in-out infinite;
+}
+
+.graphic-check {
+  animation: delivery-check 4.8s ease-in-out infinite;
+}
+
+.graphic-node {
+  fill: var(--copper);
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 220ms ease;
+}
+
+.service-card:hover .graphic-draw,
+.service-card:focus-within .graphic-draw,
+.service-card:active .graphic-draw {
+  stroke-dashoffset: 0;
+}
+
+.service-card:hover .graphic-check,
+.service-card:focus-within .graphic-check,
+.service-card:active .graphic-check {
+  stroke-dashoffset: 0;
+}
+
+.service-card:hover .graphic-air,
+.service-card:focus-within .graphic-air,
+.service-card:active .graphic-air {
+  stroke-dashoffset: 0;
+  opacity: 1;
+}
+
+.service-card:hover .graphic-detail,
+.service-card:focus-within .graphic-detail,
+.service-card:active .graphic-detail {
+  fill: rgba(207, 128, 82, .2);
+  opacity: 1;
+}
+
+.service-card:hover .graphic-node,
+.service-card:focus-within .graphic-node,
+.service-card:active .graphic-node {
+  transform: scale(1.35);
+}
+
+.service-card:hover .graphic-spin,
+.service-card:focus-within .graphic-spin,
+.service-card:active .graphic-spin {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: service-fan-turn 5s linear infinite;
+}
+
+@keyframes service-fan-turn {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes valve-adjust {
+  0%, 12%, 100% { transform: rotate(0); }
+  20% { transform: rotate(-18deg); }
+  30% { transform: rotate(13deg); }
+  38% { transform: rotate(0); }
+}
+
+@keyframes water-flow {
+  0%, 8% { opacity: 0; transform: translateX(0); }
+  18% { opacity: 1; }
+  82% { opacity: 1; }
+  96%, 100% { opacity: 0; transform: translateX(15px); }
+}
+
+@keyframes airflow {
+  to { stroke-dashoffset: -30; }
+}
+
+@keyframes current-travel {
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes current-surge {
+  0%, 12%, 22%, 100% { opacity: .78; transform: scale(1); }
+  15%, 19% { opacity: 1; transform: scale(1.12); }
+}
+
+@keyframes node-pulse {
+  0%, 100% { opacity: .5; }
+  50% { opacity: 1; }
+}
+
+@keyframes blueprint-scan {
+  0%, 8% { opacity: 0; transform: translateX(0); }
+  16% { opacity: .8; }
+  74% { opacity: .8; }
+  88%, 100% { opacity: 0; transform: translateX(34px); }
+}
+
+@keyframes delivery-check {
+  0%, 38% { stroke-dashoffset: 100; }
+  50%, 74% { stroke-dashoffset: 0; }
+  88%, 100% { stroke-dashoffset: 100; }
 }
 
 .service-card h3 {
@@ -1912,6 +2114,38 @@ textarea {
 
   .blueprint-node {
     animation: none;
+  }
+
+  .graphic-draw,
+  .graphic-check,
+  .graphic-air {
+    stroke-dashoffset: 0;
+    animation: none;
+    transition: none;
+  }
+
+  .graphic-valve,
+  .graphic-water,
+  .graphic-fan,
+  .graphic-bolt,
+  .graphic-current,
+  .graphic-pulse,
+  .graphic-scan {
+    animation: none;
+  }
+
+  .graphic-water,
+  .graphic-pulse {
+    opacity: 1;
+  }
+
+  .graphic-scan {
+    opacity: 0;
+  }
+
+  .graphic-detail,
+  .graphic-node {
+    transition: none;
   }
 
   .has-reveal [data-reveal] {
