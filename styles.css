@@ -478,7 +478,7 @@ textarea {
   position: relative;
   z-index: 3;
   width: min(760px, 64%);
-  margin: 82px 0 0 9.5%;
+  margin: -50px 0 0 9.5%;
   animation: content-reveal 850ms 150ms ease-out both;
 }
 
